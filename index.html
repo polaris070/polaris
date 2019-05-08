@@ -1,45 +1,43 @@
+<!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initail-scale=1">
+    <link rel="stylesheet" href="/w3css/3/w3.css">
+    <body>
+        <!-- Navigation -->>
+        <nav class="w3-bar w3-black">
+            <a href="#home" class="w3-button w3-bar-item">Home</a>
+            <a href="#Study" class="w3-button w3-bar-item">Home</a>
+            <a href="#Trip" class="w3-button w3-bar-item">Home</a>
+            <a href="#Contact" class="w3-button w3-bar-item">Home</a>
+        </nav>
+        <!-- Slid Show -->
+        <section>
+            <img class="Slides" src="img_la.jpg" style="width:100%">
+            <img class="Slides" src="img_ny.jpg" style="width:100%">
+            <img class="Slides" src="img_chicago.jpg" style="width:100%">
+        </section>
+        <script>
+        // Automation SlideShow - Change image every 3 seconds
+        var varIndex = 0;
+        carousel();
 
-.navbar {
-  width: 100%;
-  background-color: #555;
-  overflow: auto;
-}
-
-.navbar a {
-  float: left;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-  background-color: #000;
-}
-
-.active {
-  background-color: #4CAF50;
-}
-
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-}
-</style>
-<body>
-<div class="navbar">
-  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
-  <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> 
-  <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
-  <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
-</div>
-
-</body>
-</html> 
+        function carousel()
+        {
+            var i;
+            var  x = document.getElementsByClassName("Slides");
+            for(i = 0; i < x.length; i++)
+            {
+                x[i].style.display = "none";
+            }
+            varIndex++;
+            if(varIndex > x.length)
+            {
+                varIndex = 1;
+            }
+            x[varIndex-1].style.display = "block";
+            setTImeout(carousel, 3000);
+        }
+        </script>
+    </body>
+</html>
