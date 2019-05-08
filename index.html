@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initail-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <body>
         <!-- Navigation -->
         <nav class="w3-bar w3-black">
@@ -13,62 +14,58 @@
         </nav>
         <!-- Slid Show -->
         <section>
-            <img class="Slides" src="img_city.jpg" style="width:100%">
-            <img class="Slides" src="img_city2.jpg" style="width:100%">
-            <img class="Slides" src="img_eiffel.jpg" style="width:100%">
+            <img class="mySlides" src="img_city.jpg" style="width:100%">
+            <img class="mySlides" src="img_city2.jpg" style="width:100%">
+            <img class="mySlides" src="img_eiffel.jpg" style="width:100%">
         </section>
         <section class="w3-container w3-center" style="max-width:600px">
                 <h2 class="w3-wide">First Step</h2>
                 <p class="w3-opacity"><i>Hello</i></p>
-            </section>
-            <section class="w3-container w3-content w3-center" style="max-width:600px">
-                <p class="w3-justfy">
-                    안녕하세요. 테스트 홈페이지 입니다.
-                </p>
-            </section>
-            <section class="w3-row-padding w3-center w3-light-grey">
-                <article class="w3-third">
-                    <p>MinJoon</p>
-                </article>
-                <article class="w3-third">
-                    <p>MinJoon</p>
-                </article>
-                <article class="w3-third">
-                    <p>MinJoon</p>
-                </article>
-            </section>
+        </section>
+        <section class="w3-container w3-content w3-center" style="max-width:600px">
+            <p class="w3-justfy">
+                안녕하세요. 테스트 홈페이지 입니다.
+            </p>
+        </section>
+        <section class="w3-row-padding w3-center w3-light-grey">
+            <article class="w3-third">
+                <p>MinJoon</p>
+            </article>
+            <article class="w3-third">
+                <p>MinJoon</p>
+            </article>
+            <article class="w3-third">
+                <p>MinJoon</p>
+            </article>
+        </section>
             
-           <!-- Footer -->
-           <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-               <a href="#"><i class=fa fa-facebook-official"></i></a>
-               <a href="#"><i class=fa fa-pinterest-p"></i></a>
-               <a href="#"><i class=fa fa-twitter"></i></a>
-               <a href="#"><i class=fa fa-flickr"></i></a>
-               <a href="#"><i class=fa fa-linkedin"></i></a>
-               <p class="w3-medium">
-                   Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-              </p>
-            </footer>
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+            <a href="#"><i class=fa fa-facebook-official"></i></a>
+            <a href="#"><i class=fa fa-pinterest-p"></i></a>
+            <a href="#"><i class=fa fa-twitter"></i></a>
+            <a href="#"><i class=fa fa-flickr"></i></a>
+            <a href="#"><i class=fa fa-linkedin"></i></a>
+            <p class="w3-medium">
+                Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+            </p>
+        </footer>
+
         <script>
-        // Automation SlideShow - Change image every 3 seconds
-        var varIndex = 0;
+       // Automatic Slideshow - change image every 3 seconds
+        var myIndex = 0;
         carousel();
 
-        function carousel()
-        {
-            var i;
-            var  x = document.getElementsByClassName("Slides");
-            for(i = 0; i < x.length; i++)
-            {
-                x[i].style.display = "none";
-            }
-            varIndex++;
-            if(varIndex > x.length)
-            {
-                varIndex = 1;
-            }
-            x[varIndex-1].style.display = "block";
-            setTImeout(carousel, 3000);
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 3000);
         }
         </script>
     </body>
