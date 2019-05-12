@@ -1,5 +1,6 @@
 Git Study Repository
 
-[°³ÀÎºí·Î±× ¸¸µé±â]
-1. ¸Å´º¹Ù ¸¸µé±â
-2. ¼¼¹« ÆäÀÌÁö ¸¸µé±â
+[git & Blog ë§Œë“¤ê¸° Project]
+1. ìƒë‹¨ ë©”ë‰´ë°” ë§Œë“¤ê¸°
+2. ë©”ë‰´ì— ë§žëŠ” html ë§Œë“¤ê¸°
+3. Responsive Page ë§Œë“¤ê¸°
